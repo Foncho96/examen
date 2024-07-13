@@ -1,0 +1,47 @@
+import random
+
+
+def generar_sueldos():
+    sueldos = []
+    for i in range(10):
+        sueldo = random.randint(300000, 2500000)
+        sueldos.append(sueldo)
+    return sueldos
+
+nombres = ["Juan Pérez", "María García", "Carlos López", "Ana Martínez", "Pedro Rodríguez", "Laura Hernández", "Miguel Sánchez", "Isabel Gómez", "Francisco Díaz", "Elena Fernández"]
+sueldos = generar_sueldos()
+
+print("Empleados y sueldos:")
+for i in range(10):
+    print(f"{nombres[i]}: ${sueldos[i]:,}")
+
+#crear menú
+
+def menu():
+    while True:
+        print('- Ingrese una opción -')
+        print('Opción 1 - Asignar sueldos aleatorios - ')
+        print('Opción 2 - Clasificar sueldos -')
+        print('Opción 3 - Ver estadísticas - ')
+        print('Opción 4 - Reporte de sueldos - ')
+        print('Opción 5 - Salir del programa - ')
+
+
+        op = input('Ingrese una opción: ')
+
+        if op == '1':
+            generar_sueldos()
+        
+        elif op == '2':
+            pass
+
+        elif op == '3':
+            pass   
+
+        elif op == '3':
+            pass
+
+        elif op == '5':
+            print('-Saliendo del programa-')
+            break
+menu()
